@@ -136,8 +136,13 @@ try
     // 9. Map controllers
     app.MapControllers();
 
-    // Health check shortcut at root /health (no versioning required)
-    app.MapGet("/health", () => Results.Ok(new { status = "ok", timestamp = DateTime.UtcNow }));
+    // Health check shortcut at root /health (reports active DatabaseProvider)
+    app.MapGet("/health", (AgriPhd.Api.Data.DatabaseProviderInfo provider) => Results.Ok(new
+    {
+        status = "ok",
+        databaseProvider = provider.Provider.ToString(),
+        timestamp = DateTime.UtcNow
+    }));
 
     Log.Information("AgriPhd.Api started. Swagger: /swagger | Health: /health");
 

@@ -1,0 +1,32 @@
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: agriphd-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: agri_phd_live
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres_dev_password_2026
+    ports:
+      - "5432:5432"
+    volumes:
+      - agriphd_pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d agri_phd_live"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  adminer:
+    image: adminer:latest
+    container_name: agriphd-adminer
+    restart: unless-stopped
+    ports:
+      - "8085:8080"
+    depends_on:
+      postgres:
+        condition: service_healthy
+
+volumes:
+  agriphd_pgdata:
+    name: agriphd_pgdata
