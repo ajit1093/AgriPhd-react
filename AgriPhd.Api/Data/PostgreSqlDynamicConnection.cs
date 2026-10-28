@@ -253,7 +253,27 @@ public class PostgreSqlDynamicDataReader : DbDataReader
         ["lastlogindatetime"] = "LastLoginDateTime",
         ["datavaluefield"] = "DataValueField",
         ["datatextfield"] = "DataTextField",
-        ["group"] = "Group"
+        ["group"] = "Group",
+        ["notificationid"] = "NotificationID",
+        ["notificationcategoryid"] = "NotificationCategoryID",
+        ["notificationcategory"] = "NotificationCategory",
+        ["notificationtitle"] = "NotificationTitle",
+        ["displaystartdatetime"] = "DisplayStartDateTime",
+        ["displayenddatetime"] = "DisplayEndDateTime",
+        ["publishdatetime"] = "PublishDateTime",
+        ["contenttype"] = "ContentType",
+        ["textcontent"] = "TextContent",
+        ["filecontentname"] = "FileContentName",
+        ["filecontenturl"] = "FileContentURL",
+        ["openinnewpage"] = "OpenInNewPage",
+        ["displaynewimage"] = "DisplayNewImage",
+        ["activityname"] = "ActivityName",
+        ["activitydetails"] = "ActivityDetails",
+        ["activitystartdatetime"] = "ActivityStartDateTime",
+        ["activityenddatetime"] = "ActivityEndDateTime",
+        ["activitystartdatetimef"] = "ActivityStartDateTimeF",
+        ["activityenddatetimef"] = "ActivityEndDateTimeF",
+        ["srno"] = "SrNo"
     };
 
     public PostgreSqlDynamicDataReader(DbDataReader inner)
