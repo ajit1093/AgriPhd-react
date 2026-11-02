@@ -42,7 +42,7 @@ export function PublicLayout() {
               </p>
               <div className="mt-1.5 flex flex-wrap items-center gap-2">
                 <span className="inline-flex items-center px-3 py-0.5 rounded-full text-xs font-bold bg-gradient-to-r from-academic-navy to-primary-900 text-white shadow-2xs tracking-wide uppercase">
-                  Doctor of Philosophy (Ph.D.) Admissions 2026-27
+                  Doctor of Philosophy (Ph.D.) Admissions
                 </span>
                 <span className="text-xs text-slate-500 font-medium hidden md:inline">
                   State Agricultural Universities of Maharashtra
@@ -179,7 +179,7 @@ export function PublicLayout() {
 
           <div className="mt-8 pt-4 border-t border-slate-800 text-xs text-slate-400 flex flex-col sm:flex-row items-center justify-between gap-2">
             <span>© MCAER Pune. All Rights Reserved.</span>
-            <span>Online Ph.D. Agriculture Centralized Admissions Portal 2026-27</span>
+            <span>Online Ph.D. Agriculture Centralized Admissions Portal</span>
           </div>
         </div>
       </footer>
